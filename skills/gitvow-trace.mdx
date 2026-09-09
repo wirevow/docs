@@ -1,0 +1,18 @@
+---
+title: "Who wrote these lines?"
+description: "Each line group shows agent with the session, step and the plan stated at the time, or person with the commit"
+---
+
+Run:
+
+```sh
+gitvow trace <path>:<start>-<end>     # a range
+gitvow trace <path>                   # the whole file
+```
+
+Each line group shows `agent` with the session, step and the plan stated at the time, or `person` with the commit. Ranges are grouped by commit so a mixed region reads as a sequence of authorship.
+
+How to use the answer:
+- Lines by a person after an agent session are the human's decision; preserve their intent.
+- An agent plan that does not mention the region is a signal the lines were incidental; check `gitvow why <path>` for the wider story before changing them.
+- To see the exact file the agent produced at that step, list `gitvow snapshots --session <id>` and use `gitvow diff <id> <n>` or `gitvow restore <id> <n>`.

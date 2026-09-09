@@ -1,0 +1,23 @@
+---
+title: "gitvow-skills"
+description: "Agent skills that teach Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI and Factory to ask the gitvow record: why a file looks the way it does, who wrote"
+---
+
+Agent skills that teach Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI and Factory to ask the [gitvow](https://wirevow.dev/gitvow/) record: why a file looks the way it does, who wrote these lines, what was tried before, and what to hand off.
+
+```sh
+npx skills add https://github.com/wirevow/gitvow-skills --all
+```
+
+| Skill | Command it teaches | Use when |
+|---|---|---|
+| `gitvow-why` | `gitvow why <path>` | before changing code you did not write; when asked why code exists |
+| `gitvow-trace` | `gitvow trace <path>[:a-b]` | a region looks surprising; before deleting unclear code |
+| `gitvow-recall` | `gitvow recall <words>` | starting a task; a bug looks familiar |
+| `gitvow-handoff` | `gitvow handoff` | ending a session; switching agents |
+
+Requires `gitvow` 0.7 or later on the agent's PATH (`pip install gitvow`). Each skill is a `SKILL.md` in the common Agent Skills format under `skills/`; install individually with `npx skills add https://github.com/wirevow/gitvow-skills --skill gitvow-why`.
+
+The skills read only the redacted record that gitvow writes (trailers, session notes, snapshots, ledger). They never read transcripts. Documentation: https://wirevow.dev/gitvow/guides/skills/
+
+Apache-2.0.

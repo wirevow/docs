@@ -1,0 +1,134 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "maple",
+  "name": "Wirevow",
+  "description": "Provenance, a policy gate and an agreed record for AI-agent coding sessions, stored in the git you already have.",
+  "colors": {
+    "primary": "#B8862E",
+    "light": "#EBBA66",
+    "dark": "#EBBA66"
+  },
+  "logo": {
+    "light": "/images/logo-light.svg",
+    "dark": "/images/logo-dark.svg",
+    "href": "https://wirevow.com"
+  },
+  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "dark",
+    "strict": false
+  },
+  "background": {
+    "color": {
+      "light": "#F7F5F0",
+      "dark": "#08090C"
+    }
+  },
+  "fonts": {
+    "heading": { "family": "Bricolage Grotesque" },
+    "body": { "family": "Onest" }
+  },
+  "styling": {
+    "codeblocks": "dark"
+  },
+  "navbar": {
+    "links": [
+      { "label": "wirevow.com", "href": "https://wirevow.com" },
+      { "label": "GitHub", "href": "https://github.com/wirevow" }
+    ],
+    "primary": { "type": "button", "label": "pip install gitvow", "href": "https://pypi.org/project/gitvow/" }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/wirevow",
+      "website": "https://wirevow.com"
+    }
+  },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude", "mcp", "cursor", "vscode"]
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "gitvow",
+        "icon": "code-commit",
+        "groups": [
+          { "group": "Start", "pages": ["gitvow/index", "gitvow/quickstart"] },
+          {
+            "group": "Concepts",
+            "pages": [
+              "gitvow/concepts/sessions",
+              "gitvow/concepts/gate",
+              "gitvow/concepts/storage",
+              "gitvow/concepts/snapshots",
+              "gitvow/concepts/providers"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "gitvow/guides/install",
+              "gitvow/guides/policy",
+              "gitvow/guides/reading",
+              "gitvow/guides/trial",
+              "gitvow/guides/redaction",
+              "gitvow/guides/pull-requests",
+              "gitvow/guides/providers",
+              "gitvow/guides/snapshots",
+              "gitvow/guides/other-agents",
+              "gitvow/guides/skills",
+              "gitvow/guides/digest",
+              "gitvow/guides/cost"
+            ]
+          },
+          {
+            "group": "Reference",
+            "pages": [
+              "gitvow/reference/cli",
+              "gitvow/reference/hooks",
+              "gitvow/reference/note",
+              "gitvow/reference/policy",
+              "gitvow/reference/provider-protocol",
+              "gitvow/reference/adapters",
+              "gitvow/reference/adapter-protocol"
+            ]
+          },
+          {
+            "group": "Project",
+            "pages": ["gitvow/security", "gitvow/roadmap", "gitvow/faq", "gitvow/architecture", "gitvow/contributing"]
+          }
+        ]
+      },
+      {
+        "tab": "Provider: facts",
+        "icon": "database",
+        "groups": [
+          {
+            "group": "gitvow-provider-facts",
+            "pages": ["provider-facts/index", "provider-facts/install", "provider-facts/store", "provider-facts/security"]
+          }
+        ]
+      },
+      {
+        "tab": "Skills",
+        "icon": "wand-magic-sparkles",
+        "groups": [
+          {
+            "group": "gitvow-skills",
+            "pages": ["skills/index", "skills/gitvow-why", "skills/gitvow-trace", "skills/gitvow-recall", "skills/gitvow-handoff"]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        { "anchor": "PyPI", "href": "https://pypi.org/project/gitvow/", "icon": "python" },
+        { "anchor": "Releases", "href": "https://github.com/wirevow/gitvow/releases", "icon": "tag" }
+      ]
+    }
+  },
+  "redirects": [
+    { "source": "/", "destination": "/gitvow" }
+  ],
+  "seo": { "indexing": "navigable" }
+}

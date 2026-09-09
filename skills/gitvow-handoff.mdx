@@ -1,0 +1,18 @@
+---
+title: "Hand the work to the next session"
+description: "Paste the output as the first message of the next session, or into the task tracker"
+---
+
+Run:
+
+```sh
+gitvow handoff                      # the current session in this repository
+gitvow handoff --session <id>       # a specific earlier session
+```
+
+Paste the output as the first message of the next session, or into the task tracker. It comes entirely from the redacted record, so it is safe to share within the team.
+
+How to use it:
+- Add one or two sentences on what remains and why, above the generated block; the record knows what happened, not what you intended next.
+- If `Open confirmations` is non-zero, list them for the person: those are actions the gate stopped and a human must decide.
+- The receiving agent should start with `gitvow why <file>` for each file listed before editing.

@@ -1,0 +1,9 @@
+/* Wirevow identity on Mintlify: carbon ground, bone type, one amber accent, the signature-wire gradient as a hairline. */
+#navbar { border-bottom: 1px solid rgba(242, 239, 233, 0.10); }
+#navbar::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 1px;
+  background: linear-gradient(92deg, #F27A5C, #EBBA66 34%, #55C7BC 68%, #7C8DEB); opacity: .35; pointer-events: none;
+}
+h1, h2, h3 { letter-spacing: -0.02em; }
+#content-area h2 { margin-top: 2.2em; padding-top: .6em; border-top: 1px solid rgba(128, 128, 128, 0.18); }
+#content-area table th { font-family: ui-monospace, "JetBrains Mono", monospace; font-size: .72em; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; }

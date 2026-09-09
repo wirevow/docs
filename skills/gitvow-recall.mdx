@@ -1,0 +1,18 @@
+---
+title: "Has this been worked on before?"
+description: "Each hit is a session with its date, commit count and the plan it stated.  marks a session that ended without committing; its work may survive in snapshots"
+---
+
+Run with the concrete words of the task, not generic ones:
+
+```sh
+gitvow recall week start cache
+gitvow recall export endpoint orders
+```
+
+Each hit is a session with its date, commit count and the plan it stated. `(ledger only)` marks a session that ended without committing; its work may survive in snapshots.
+
+How to use the answer:
+- Read `gitvow why <file>` for the files those sessions touched before writing code.
+- If a previous session tried the same approach and a person changed it afterwards, take that as feedback on the approach.
+- If nothing is recorded, say so and proceed; do not invent history.
