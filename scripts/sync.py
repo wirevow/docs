@@ -81,6 +81,10 @@ def convert(md: str, tab: str, rel_dir: str, fallback_title: str) -> str:
         else:
             cut = d[:160]
             d = cut[: cut.rfind(". ") + 1] if ". " in cut else cut[: cut.rfind(" ")]
+            # move the first sentence up into the subtitle and let the paragraph continue from the second
+            m2 = re.match(r"^(.+?\.)\s+(?=[A-Z`*\[])", raw)
+            if m2 and re.sub(r"[`*_\[\]{}<>]", "", re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", m2.group(1))).strip().rstrip(".") == d.strip().rstrip("."):
+                body = body.replace(raw, raw[m2.end():], 1)
         desc = d.strip().rstrip(".").replace('"', "'")
     out = []
     for seg, is_code in split_code(body):

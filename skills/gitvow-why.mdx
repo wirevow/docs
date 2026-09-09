@@ -9,7 +9,7 @@ Run:
 gitvow why <path>
 ```
 
-The output lists the file's commits newest first. Agent commits show the session, the step within that session, the agent's stated plan before committing, and the attribution: `agent share` is the fraction of added lines that match what the agent wrote; `lines changed by a person afterwards` means a human reworked it before committing. Commits marked `(person)` were made by a human with no session.
+Agent commits show the session, the step within that session, the agent's stated plan before committing, and the attribution: `agent share` is the fraction of added lines that match what the agent wrote; `lines changed by a person afterwards` means a human reworked it before committing. Commits marked `(person)` were made by a human with no session.
 
 How to use the answer:
 - If a person changed lines after the agent, treat that region as deliberate; do not "fix" it back.

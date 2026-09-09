@@ -3,7 +3,7 @@ title: "Providers: policy from facts"
 description: "A regular expression can say 'this path looks like an authorization file'"
 ---
 
-A regular expression can say "this path looks like an authorization file". It cannot say "this route has four callers in two other services" or "this endpoint would be reachable without authentication". Those are facts about the codebase, and they live outside the repository the agent is editing.
+It cannot say "this route has four callers in two other services" or "this endpoint would be reachable without authentication". Those are facts about the codebase, and they live outside the repository the agent is editing.
 
 A **provider** is a program that answers such questions for the gate. gitvow defines the questions and the answer shape; the provider owns the knowledge. gitvow ships none of that knowledge, only the contract and a small example.
 
