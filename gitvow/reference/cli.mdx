@@ -1,6 +1,6 @@
 ---
 title: "CLI"
-description: "Exit codes: 0 success or allow; 2 blocked ; 1 error"
+description: "Exit codes: 0 success or allow; 2 blocked (hook and check); 1 error"
 ---
 
 ```
@@ -32,6 +32,5 @@ gitvow selftest                                           drive every hook in a 
 gitvow --version
 ```
 
-Exit codes: `0` success or allow; `2` blocked (hook and check); `1` error.
 
 Environment: none required. `HOME` decides where the user policy and ledger live. Tests set `GIT_CONFIG_GLOBAL` to isolate git configuration.

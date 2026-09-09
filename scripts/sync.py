@@ -68,13 +68,17 @@ def convert(md: str, tab: str, rel_dir: str, fallback_title: str) -> str:
     desc = ""
     body = md.strip("\n")
     prose = re.sub(r"```.*?```", "", body, flags=re.S)
-    cands = re.findall(r"^(?![#|>\-*!\s`])([^\n]{40,})$", prose, re.M)
+    cands = re.findall(r"^(?![#|>\-!\s`]|\* )([^\n]{40,})$", prose, re.M)
     cands = [c for c in cands if not c.rstrip().endswith(":")] or cands
     if cands:
-        d = re.sub(r"<[^>]*>", "", cands[0])
-        d = re.sub(r"[`*_\[\]{}]", "", d)
-        d = re.sub(r"\([^)]*\)", "", d).strip()
-        if len(d) > 160:
+        raw = cands[0]
+        d = re.sub(r"<[^>]*>", "", raw)
+        d = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", d)
+        d = re.sub(r"[`*_\[\]{}]", "", d).strip()
+        if len(d) <= 200:
+            # the whole lede becomes the subtitle Mintlify renders under the title: drop it from the body
+            body = body.replace(raw + "\n", "", 1).replace(raw, "", 1)
+        else:
             cut = d[:160]
             d = cut[: cut.rfind(". ") + 1] if ". " in cut else cut[: cut.rfind(" ")]
         desc = d.strip().rstrip(".").replace('"', "'")

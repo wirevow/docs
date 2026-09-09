@@ -1,9 +1,7 @@
 ---
 title: "gitvow"
-description: "No runtime dependencies. Standard-library Python and git. One command to install, one to remove"
+description: "Who made this change, what were they trying to do, and was it allowed? For code written with AI agents, git alone cannot answer. gitvow makes it answer, using only git and a few hooks"
 ---
-
-**Who made this change, what were they trying to do, and was it allowed?** For code written with AI agents, git alone cannot answer. gitvow makes it answer, using only git and a few hooks.
 
 - Every commit made during an agent session carries the session id and a step number as **commit trailers**.
 - Every such commit gets a **session note**: what the agent said it was doing, which tools it used, which files it touched, how much of the commit it wrote. Redacted before it is written. Stored as a git note, never in the tree.

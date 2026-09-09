@@ -35,7 +35,6 @@ Stored under `refs/notes/gitvow/<session-id>` (gitvow 0.1 used the single ref `r
 | `agent_share` | float or null | share of added lines that match the agent's version; null when the commit adds no lines or no agent-written blob was recorded |
 | `files[]` | object[] | per file: `path`, `agent_wrote`, `lines_added_in_commit`, `human_lines_added`, `human_lines_removed`, `agent_blob`, `committed_blob` |
 
-The schema is additive. New fields may appear; existing fields keep their meaning. Consumers should ignore unknown fields.
 
 ## Trailers
 ```

@@ -1,11 +1,10 @@
 ---
 title: "Redaction and custom rules"
-description: "1. Custom rules you supply as  pairs"
+description: "1. Custom rules you supply as (pattern, replacement) pairs"
 ---
 
 Every string that enters a note, the ledger or the log passes through redaction first. Layers, in order:
 
-1. **Custom rules** you supply as (pattern, replacement) pairs.
 2. **Known formats**: AWS access keys, JWTs, GitHub tokens, `sk-` API keys, Slack and Google API keys.
 3. **Credential assignments**: `password=`, `token=`, `secret=`, `api_key=`, `authorization:` and `bearer` values; the key is kept, the value replaced.
 4. **Connection strings** for MySQL, Postgres, Redis, MongoDB, AMQP.

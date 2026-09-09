@@ -1,6 +1,6 @@
 ---
 title: "Write a policy"
-description: "Patterns are Python re syntax, searched  against the Bash command text or the file path; MCP patterns are matched against the whole tool name"
+description: "Patterns are Python re syntax, searched (not anchored) against the Bash command text or the file path; MCP patterns are matched against the whole tool name"
 ---
 
 The policy is a JSON file of regular expressions. Start from the default:
@@ -24,7 +24,6 @@ gitvow check -- <a command>      # dry-run any rule
 }
 ```
 
-Patterns are Python `re` syntax, searched (not anchored) against the Bash command text or the file path; MCP patterns are matched against the whole tool name.
 
 ## Advice from running it
 - Put things you never want in `bash_deny`. Put things you want to hear about in `bash_confirm`. Confirm is cheap: it costs one question and the log shows how often it fires.
