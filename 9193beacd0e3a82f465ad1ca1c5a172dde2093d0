@@ -2,9 +2,9 @@ gitvow-session
 {
  "schema": 7,
  "session_id": "8f3d5c71-574a-4eec-8903-9425e3a8335b",
- "step": 7,
- "committed_at": "2026-09-22T23:12:10",
- "assistant_turns_so_far": 25134,
+ "step": 8,
+ "committed_at": "2026-09-22T23:15:22",
+ "assistant_turns_so_far": 25144,
  "tool_calls_so_far": 500,
  "tools_used": [
   "Agent",
@@ -19,7 +19,7 @@ gitvow-session
   "ToolSearch",
   "Write"
  ],
- "last_stated_plan": "Releasing 0.28.1 now (commit alone in this response, per the lesson), then hooks reinstall and docs sync.",
+ "last_stated_plan": "Step 1 is done and the follow-up defect is closed. Summary:\n\n**gitvow 0.28.0: the record server.** `gitvow serve` speaks MCP over stdio, read-only, nine tools:\n\n| tool | answers |\n|---|---|\n| `record_brief` | what the record says before you touch this repo: earned rules, proposals (not rules), the store's brief with its age |\n| `record_claims` | what the owners confirmed, optionally for a path prefix |\n| `record_standing` | how a finding class stands: rules, proposals, decisions newest first |\n| `record_why` / `record_recall` / `record_handoff` | why a file looks this way; has this been done b",
  "files_in_commit": [
   "gitvow/reference/policy.mdx | 4 ++++"
  ],
@@ -39,10 +39,10 @@ gitvow-session
   ]
  },
  "usage": {
-  "input_tokens": 110214,
-  "output_tokens": 7754515,
-  "cache_read_tokens": 3050828125,
-  "cache_write_tokens": 85971060,
+  "input_tokens": 110378,
+  "output_tokens": 7757555,
+  "cache_read_tokens": 3054975298,
+  "cache_write_tokens": 85976552,
   "reasoning_tokens": 0,
   "models": {
    "claude-opus-4-6": 9228,
@@ -52,7 +52,7 @@ gitvow-session
    "claude-fable-5": 715,
    "claude-opus-4-8": 75,
    "claude-opus-5": 1104,
-   "claude-fable-5-1": 1606
+   "claude-fable-5-1": 1612
   },
   "by_model": {
    "claude-opus-4-6": {
@@ -105,15 +105,15 @@ gitvow-session
     "reasoning": 0
    },
    "claude-fable-5-1": {
-    "input": 38896,
-    "output": 2897491,
-    "cache_read": 755991896,
-    "cache_write": 17183737,
+    "input": 39060,
+    "output": 2900531,
+    "cache_read": 760139069,
+    "cache_write": 17189229,
     "reasoning": 0
    }
   },
-  "total_tokens": 3144663914,
-  "estimated_cost_usd": 6651.7536,
+  "total_tokens": 3148819783,
+  "estimated_cost_usd": 6658.3078,
   "pricing": "gitvow defaults 2026-09",
   "unpriced_models": [
    "<synthetic>"
