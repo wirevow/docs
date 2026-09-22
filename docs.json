@@ -127,6 +127,7 @@
             "group": "Project",
             "pages": [
               "gitvow/security",
+              "gitvow/trust",
               "gitvow/roadmap",
               "gitvow/faq",
               "gitvow/architecture",
