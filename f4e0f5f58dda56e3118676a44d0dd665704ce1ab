@@ -2,9 +2,9 @@ gitvow-session
 {
  "schema": 9,
  "session_id": "8f3d5c71-574a-4eec-8903-9425e3a8335b",
- "step": 26,
- "committed_at": "2026-10-08T11:05:12",
- "assistant_turns_so_far": 26405,
+ "step": 27,
+ "committed_at": "2026-10-08T11:24:20",
+ "assistant_turns_so_far": 26436,
  "tool_calls_so_far": 500,
  "tools_used": [
   "Agent",
@@ -19,7 +19,7 @@ gitvow-session
   "ToolSearch",
   "Write"
  ],
- "last_stated_plan": "Green across the board. Committing 0.35.0, alone.",
+ "last_stated_plan": "Green. Committing the 0.35.1 fix for the digest's intent count, alone.",
  "files_in_commit": [
   "gitvow/guides/digest.mdx    |  2 +-",
   "gitvow/guides/outcomes.mdx  | 20 +++++++++++---------",
@@ -57,10 +57,10 @@ gitvow-session
   ]
  },
  "usage": {
-  "input_tokens": 121476,
-  "output_tokens": 8430312,
-  "cache_read_tokens": 3326578007,
-  "cache_write_tokens": 96554312,
+  "input_tokens": 121776,
+  "output_tokens": 8446329,
+  "cache_read_tokens": 3339386393,
+  "cache_write_tokens": 96576318,
   "reasoning_tokens": 0,
   "models": {
    "claude-opus-4-6": 9228,
@@ -70,7 +70,7 @@ gitvow-session
    "claude-fable-5": 715,
    "claude-opus-4-8": 75,
    "claude-opus-5": 1104,
-   "claude-fable-5-1": 2054
+   "claude-fable-5-1": 2068
   },
   "by_model": {
    "claude-opus-4-6": {
@@ -123,15 +123,15 @@ gitvow-session
     "reasoning": 0
    },
    "claude-fable-5-1": {
-    "input": 50158,
-    "output": 3573288,
-    "cache_read": 1031741778,
-    "cache_write": 27766989,
+    "input": 50458,
+    "output": 3589305,
+    "cache_read": 1044550164,
+    "cache_write": 27788995,
     "reasoning": 0
    }
   },
-  "total_tokens": 3431684107,
-  "estimated_cost_usd": 7314.6681,
+  "total_tokens": 3444530816,
+  "estimated_cost_usd": 7335.4991,
   "pricing": "gitvow defaults 2026-09",
   "unpriced_models": [
    "<synthetic>"
