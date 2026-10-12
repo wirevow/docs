@@ -111,6 +111,7 @@
               "gitvow/guides/outcomes",
               "gitvow/guides/reach",
               "gitvow/guides/sessions",
+              "gitvow/guides/runtime",
               "gitvow/guides/digest",
               "gitvow/guides/cost"
             ]
